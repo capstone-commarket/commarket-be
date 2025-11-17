@@ -23,11 +23,6 @@
 
 ```bash
 git clone <저장소-URL>
-예시:
-
-bash
-코드 복사
-git clone https://github.com/team-qchecker/backend.git
 ```
 
 ## 3. 브랜치 전략 (Branch Strategy)
