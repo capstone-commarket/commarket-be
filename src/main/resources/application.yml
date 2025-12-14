@@ -1,13 +1,12 @@
 spring:
   jpa:
-    show-sql: true
-    properties:
-      hibernate:
-        format_sql: true
-      defer-datasource-initialization: true
-    datasource:
-      url: jdbc:h2:mem:testdb
-    h2:
-      console:
-        enabled: true
-      
+    hibernate:
+      ddl-auto: update
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://database.cz02ckmiuje0.ap-southeast-2.rds.amazonaws.com:3306/spring_member_db
+    username: admin
+    password: commarket
+
+server:
+  port: 8085
