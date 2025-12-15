@@ -1,39 +1,44 @@
 plugins {
-	java
-	id("org.springframework.boot") version "3.4.10"
-	id("io.spring.dependency-management") version "1.1.7"
+    id 'java'
+    id 'org.springframework.boot' version '3.2.4'
+    id 'io.spring.dependency-management' version '1.1.4'
 }
 
-group = "com.commarket"
-version = "0.0.1-SNAPSHOT"
-description = "Demo project for Spring Boot"
+group = 'com.example.demo'
+version = '0.0.1-SNAPSHOT'
 
 java {
-	toolchain {
-		languageVersion = JavaLanguageVersion.of(21)
-	}
+    sourceCompatibility = '17'
 }
 
 configurations {
-	compileOnly {
-		extendsFrom(configurations.annotationProcessor.get())
-	}
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
 }
 
 repositories {
-	mavenCentral()
+    mavenCentral()
 }
 
 dependencies {
-	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
-	implementation("org.springframework.boot:spring-boot-starter-web")
-	compileOnly("org.projectlombok:lombok")
-	runtimeOnly("com.h2database:h2")
-	annotationProcessor("org.projectlombok:lombok")
-	testImplementation("org.springframework.boot:spring-boot-starter-test")
-	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+    implementation 'org.springframework.boot:spring-boot-starter-websocket'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa' // JPA
+    runtimeOnly 'org.mariadb.jdbc:mariadb-java-client' // mySQL에서 mariadb로 변경
+    
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
-tasks.withType<Test> {
-	useJUnitPlatform()
+tasks.named('test') {
+    useJUnitPlatform()
+}
+
+// 코드추가
+tasks.withType(JavaCompile) {
+    options.compilerArgs << '-parameters'
 }
