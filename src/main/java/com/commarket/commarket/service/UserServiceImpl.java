@@ -1,11 +1,11 @@
 package com.commarket.commarket.service;
 
-import com.commarket.commarket.dto.ChangePasswordRequestDTO;
-import com.commarket.commarket.dto.CreateUserRequestDTO;
-import com.commarket.commarket.dto.LoginRequestDTO;
-import com.commarket.commarket.dto.UserDetailResponse;
-import com.commarket.commarket.entity.User;
-import com.commarket.commarket.entity.UserProfile;
+import com.commarket.commarket.domain.User;
+import com.commarket.commarket.domain.UserProfile;
+import com.commarket.commarket.dto.request.ChangePasswordRequestDTO;
+import com.commarket.commarket.dto.request.CreateUserRequestDTO;
+import com.commarket.commarket.dto.request.LoginRequestDTO;
+import com.commarket.commarket.dto.response.UserDetailResponse;
 import com.commarket.commarket.repository.UserProfileRepository;
 import com.commarket.commarket.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
@@ -37,6 +37,7 @@ public class UserServiceImpl implements UserService{
                 .email(requestDTO.getEmail())
                 .password_hash(passwordEncoder.encode(requestDTO.getPassword()))
                 .name(requestDTO.getName())
+                .phoneNumber(requestDTO.getPhoneNumber())
                 .build();
         //DB에 저장하고 pk가 체워진 엔티티
         User savedUser = userRepository.save(newUser);

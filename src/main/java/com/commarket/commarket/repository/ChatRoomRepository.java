@@ -1,7 +1,9 @@
-package com.example.demo.repository;
+package com.commarket.commarket.repository;
 
-import com.example.demo.model.ChatRoomEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.commarket.commarket.domain.ChatRoomEntity;
+
 import java.util.Optional;
 
 public interface ChatRoomRepository extends JpaRepository<ChatRoomEntity, Long> {

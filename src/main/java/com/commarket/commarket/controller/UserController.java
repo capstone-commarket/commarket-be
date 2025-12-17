@@ -1,9 +1,9 @@
 package com.commarket.commarket.controller;
 
-import com.commarket.commarket.dto.ChangePasswordRequestDTO;
-import com.commarket.commarket.dto.CreateUserRequestDTO;
-import com.commarket.commarket.dto.LoginRequestDTO;
-import com.commarket.commarket.dto.NicknameUpdateRequestDTO;
+import com.commarket.commarket.dto.request.ChangePasswordRequestDTO;
+import com.commarket.commarket.dto.request.CreateUserRequestDTO;
+import com.commarket.commarket.dto.request.LoginRequestDTO;
+import com.commarket.commarket.dto.request.NicknameUpdateRequestDTO;
 import com.commarket.commarket.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;

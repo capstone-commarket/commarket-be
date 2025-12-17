@@ -1,4 +1,6 @@
-package com.example.demo.model; // 패키지 이름이 demo로 수정되었는지 확인하세요.
+package com.commarket.commarket.domain; // 패키지 이름이 demo로 수정되었는지 확인하세요.
+
+import com.commarket.commarket.enums.MessageType;
 
 import jakarta.persistence.*;
 import lombok.Getter;

@@ -1,9 +1,9 @@
-package com.example.demo.controller;
+package com.commarket.commarket.controller;
 
-import com.example.demo.model.ChatMessage;
-import com.example.demo.model.ChatMessageEntity;
-import com.example.demo.model.MessageType;
-import com.example.demo.repository.ChatMessageRepository;
+import com.commarket.commarket.domain.ChatMessage;
+import com.commarket.commarket.domain.ChatMessageEntity;
+import com.commarket.commarket.enums.MessageType;
+import com.commarket.commarket.repository.ChatMessageRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.simp.SimpMessageSendingOperations;

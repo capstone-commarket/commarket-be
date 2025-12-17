@@ -1,9 +1,9 @@
 package com.commarket.commarket.service;
 
-import com.commarket.commarket.dto.ChangePasswordRequestDTO;
-import com.commarket.commarket.dto.CreateUserRequestDTO;
-import com.commarket.commarket.dto.LoginRequestDTO;
-import com.commarket.commarket.dto.UserDetailResponse;
+import com.commarket.commarket.dto.request.ChangePasswordRequestDTO;
+import com.commarket.commarket.dto.request.CreateUserRequestDTO;
+import com.commarket.commarket.dto.request.LoginRequestDTO;
+import com.commarket.commarket.dto.response.UserDetailResponse;
 
 public interface UserService {
     //TC-signUp-01,02,03

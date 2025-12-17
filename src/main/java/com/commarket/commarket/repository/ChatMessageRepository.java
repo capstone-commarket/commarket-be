@@ -1,7 +1,9 @@
-package com.example.demo.repository; // 패키지 이름이 demo로 수정되었는지 확인하세요.
+package com.commarket.commarket.repository; // 패키지 이름이 demo로 수정되었는지 확인하세요.
 
-import com.example.demo.model.ChatMessageEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.commarket.commarket.domain.ChatMessageEntity;
+
 import java.util.List;
 
 public interface ChatMessageRepository extends JpaRepository<ChatMessageEntity, Long> {

@@ -37,6 +37,11 @@ public class SecurityConfig {
                 // 3. HTTP 기본 인증 비활성화
                 .httpBasic(basic -> basic.disable())
 
+                /* 
+                .authorizeHttpRequests(auth -> auth
+                        .anyRequest().permitAll() // 모든 요청을 인증 없이 허용
+                );*/
+
                 // 4. 경로별 접근 권한 설정
                 .authorizeHttpRequests(auth -> auth
                         // 회원가입, 로그인, 아이디 찾기 경로는 인증 없이 접근 허용 (Whitelist)
@@ -49,7 +54,6 @@ public class SecurityConfig {
                         // 나머지 모든 요청은 인증 필요
                         .anyRequest().authenticated()
                 );
-
         return http.build();
     }
 }

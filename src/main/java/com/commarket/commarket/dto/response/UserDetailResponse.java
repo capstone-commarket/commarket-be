@@ -1,4 +1,4 @@
-package com.commarket.commarket.dto;
+package com.commarket.commarket.dto.response;
 
 import lombok.*;
 

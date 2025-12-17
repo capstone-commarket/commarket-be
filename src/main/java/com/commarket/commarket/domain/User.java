@@ -1,4 +1,4 @@
-package com.commarket.commarket.entity;
+package com.commarket.commarket.domain;
 
 import jakarta.persistence.*;
 import lombok.AccessLevel;
@@ -10,7 +10,7 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 @Entity
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-@Table(name = "USER")
+@Table(name = "users")
 @EntityListeners(AuditingEntityListener.class)
 public class User {
     @Id
@@ -35,6 +35,9 @@ public class User {
     @Column( name = "phoneNUmber",length = 15, nullable = false)
     private String  phoneNumber;
 
+    @Column( name = "active", nullable = false)
+    private boolean active; //활성 상태
+
 
 
     @Builder
@@ -44,9 +47,14 @@ public class User {
         this.password_hash = password_hash;
         this.phoneNumber = phoneNumber;
         this.name = name;
+        this.active = true;
 
     }
     public void updatePassword(String newPassword){
         this.password_hash = newPassword;
+    }
+
+    public void updateActive(boolean isActive){
+        this.active = isActive;
     }
 }

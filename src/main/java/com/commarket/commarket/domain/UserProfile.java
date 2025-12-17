@@ -1,4 +1,4 @@
-package com.commarket.commarket.entity;
+package com.commarket.commarket.domain;
 
 import jakarta.persistence.*;
 import lombok.AccessLevel;
