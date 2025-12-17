@@ -1,4 +1,4 @@
-package com.example.demo.model;
+package com.commarket.commarket.domain;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

@@ -1,4 +1,6 @@
-package com.example.demo.model;
+package com.commarket.commarket.domain;
+
+import com.commarket.commarket.enums.MessageType;
 
 import lombok.Getter;
 import lombok.Setter;

@@ -1,4 +1,4 @@
-package com.commarket.commarket.dto;
+package com.commarket.commarket.dto.request;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -13,6 +13,6 @@ public class CreateUserRequestDTO {
     private String passwordConfirm;
     private String email;
     private String name;
-
     private String nickname;
+    private String phoneNumber;
 }

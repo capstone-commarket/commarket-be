@@ -1,4 +1,4 @@
-package com.commarket.commarket.dto;
+package com.commarket.commarket.dto.request;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -7,7 +7,6 @@ import lombok.NoArgsConstructor;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-public class LoginRequestDTO {
-    private String username;
-    private String password;
+public class NicknameUpdateRequestDTO {
+    private String nickname;
 }

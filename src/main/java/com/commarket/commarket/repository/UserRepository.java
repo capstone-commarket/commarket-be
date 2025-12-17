@@ -1,7 +1,8 @@
 package com.commarket.commarket.repository;
 
-import com.commarket.commarket.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.commarket.commarket.domain.User;
 
 import java.util.Optional;
 

@@ -1,4 +1,4 @@
-package com.commarket.commarket.dto;
+package com.commarket.commarket.dto.request;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class ChangePasswordRequestDTO {
-private String currentPassword;
-private String newPassword;
-private String newPasswordConfirm;
+    private String currentPassword;
+    private String newPassword;
+    private String newPasswordConfirm;
 }

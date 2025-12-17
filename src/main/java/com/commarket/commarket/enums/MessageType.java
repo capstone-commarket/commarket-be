@@ -1,4 +1,4 @@
-package com.example.demo.model;
+package com.commarket.commarket.enums;
 
 public enum MessageType {
     // 채팅방 입장
